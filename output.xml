@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.6.3 on win32)" generated="20171215 23:18:30.264">
+<suite id="s1" name="前程贷-Siye" source="D:\Lemon-workspace\前程贷-siye">
+<suite id="s1-s1" name="测试用例" source="D:\Lemon-workspace\前程贷-siye\测试用例">
+<suite id="s1-s1-s1" name="投标-测试用例" source="D:\Lemon-workspace\前程贷-siye\测试用例\投标-测试用例.robot">
+<test id="s1-s1-s1-t1" name="通过点击抢投标按钮进入投标信息界面进行合规金额投标">
+<kw name="登录" library="登录页" type="setup">
+<arguments>
+<arg>${登录地址}</arg>
+<arg>${登录用户名}</arg>
+<arg>${登录密码}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20171215 23:18:30.433" level="INFO">Opening browser 'Chrome' to base url 'http://120.76.42.189:8765/Index/login.html'.</msg>
+<status status="PASS" starttime="20171215 23:18:30.432" endtime="20171215 23:18:35.529"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20171215 23:18:35.530" endtime="20171215 23:18:36.648"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${登录页-用户名输入框}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20171215 23:18:36.648" endtime="20171215 23:18:36.691"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${登录页-用户名输入框}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20171215 23:18:36.692" level="INFO">Typing text '15815541763' into text field '//*[@name='phone']'.</msg>
+<status status="PASS" starttime="20171215 23:18:36.692" endtime="20171215 23:18:36.790"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${登录页-密码输入框}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20171215 23:18:36.790" level="INFO">Typing text 'tudou111111' into text field '//*[@name='password']'.</msg>
+<status status="PASS" starttime="20171215 23:18:36.790" endtime="20171215 23:18:36.892"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${登录页-登录按钮}</arg>
+</arguments>
+<msg timestamp="20171215 23:18:36.893" level="INFO">Clicking button '//button[text()='登录']'.</msg>
+<status status="PASS" starttime="20171215 23:18:36.893" endtime="20171215 23:18:36.975"></status>
+</kw>
+<status status="PASS" starttime="20171215 23:18:30.432" endtime="20171215 23:18:36.975"></status>
+</kw>
+<kw name="通过传入标名点击该标名下方的抢投标按钮" library="首页">
+<arguments>
+<arg>Joy</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${首页-投标按钮}</arg>
+<arg>%s</arg>
+<arg>${bid_name}</arg>
+</arguments>
+<assign>
+<var>${抢投标按钮}</var>
+</assign>
+<msg timestamp="20171215 23:18:36.978" level="INFO">${抢投标按钮} = //a[text()='投标']</msg>
+<status status="PASS" starttime="20171215 23:18:36.977" endtime="20171215 23:18:36.978"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${抢投标按钮}</arg>
+</arguments>
+<status status="PASS" starttime="20171215 23:18:36.978" endtime="20171215 23:18:40.659"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${抢投标按钮}</arg>
+</arguments>
+<msg timestamp="20171215 23:18:40.660" level="INFO">Clicking element '//a[text()='投标']'.</msg>
+<status status="PASS" starttime="20171215 23:18:40.659" endtime="20171215 23:18:42.467"></status>
+</kw>
+<status status="PASS" starttime="20171215 23:18:36.976" endtime="20171215 23:18:42.467"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20171215 23:18:42.467" endtime="20171215 23:18:45.505"></status>
+</kw>
+<tags>
+<tag>投标测试</tag>
+</tags>
+<status status="PASS" starttime="20171215 23:18:30.429" endtime="20171215 23:18:45.505" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20171215 23:18:30.311" endtime="20171215 23:18:45.506"></status>
+</suite>
+<status status="PASS" starttime="20171215 23:18:30.309" endtime="20171215 23:18:45.510"></status>
+</suite>
+<status status="PASS" starttime="20171215 23:18:30.290" endtime="20171215 23:18:45.513"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">投标测试</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="前程贷-Siye">前程贷-Siye</stat>
+<stat pass="1" fail="0" id="s1-s1" name="测试用例">前程贷-Siye.测试用例</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="投标-测试用例">前程贷-Siye.测试用例.投标-测试用例</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
