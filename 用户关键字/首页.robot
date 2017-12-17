@@ -15,9 +15,13 @@ Library    String
     
 通过传入标名点击该标名下方的抢投标按钮
     [Arguments]    ${bid_name}
-    ${抢投标按钮}    Replace String    ${首页-投标按钮}    %s    ${bid_name}    
-    Wait Until Page Contains Element    ${抢投标按钮}    
-    Click Element    ${抢投标按钮}
-    
+    ${抢投标按钮-新}    Replace String    ${首页-抢投标按钮}    %s    ${bid_name}    
+    Wait Until Page Contains Element    ${抢投标按钮-新}   
+    Focus    ${抢投标按钮-新} 
+    Click Element    ${抢投标按钮-新} 
+
+点击我的账户按钮进入我的账户页面
+    Wait Until Page Contains Element    ${首页-我的账户按钮}
+    Click Element    ${首页-我的账户按钮}
     
     

@@ -26,11 +26,11 @@ ${投标页面-标名}    //span[contains(text(),'%s')]
 ${投标页面-投标成功页面右上角x按钮}    //div[@class='layui-layer-content']//div//div//img[contains(@src,'close')]
 
 ${投标信息页面-投标金额}      //input[@data-url='/Invest/invest']
-${投标信息页面-投标金额下方投标按钮}    //input[@data-url='/Invest/invest']//parent::div//parent::div//following-sibling::button
+${投标信息页面-投标金额下方投标按钮}    //button[text()='投标']
 ${投标信息页面-投标金额右侧全投按钮}    //input[@class='set-all']
 ${投标信息页面-投标成功提示文字}    //div[@class='layui-layer-content']//div//div[@class='capital_font1 note']
 ${投标信息页面-金额错误提示文字}    //div[@class='text-center']
 ${投标信息页面-标名}    //div[@class='float_left']//span//following-sibling::span
-${投标信息页面-投标成功页面右上角x按钮}    //div[@class='layui-layer-content']//div//div//img[contains(@src,'close')]
+${投标信息页面-投标成功页面右上角x按钮}    //div[@class='layui-layer-content']//div//div//img[@src='/Public/frontend/images/close_pop.png']
     
 
